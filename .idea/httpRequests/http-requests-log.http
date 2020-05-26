@@ -1,0 +1,106 @@
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+<> 2020-05-26T104506.200.json
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+<> 2020-05-26T104503.200.json
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+<> 2020-05-26T102951.404.json
+
+###
+

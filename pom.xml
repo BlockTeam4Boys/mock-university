@@ -32,12 +32,17 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.12</version>
-			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 
 	<build>
-		<finalName>mock-univer</finalName>
+		<finalName>mockuniver</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
 	</build>
 
 </project>
