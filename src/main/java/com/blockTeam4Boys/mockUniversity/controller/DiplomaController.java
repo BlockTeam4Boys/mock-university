@@ -1,11 +1,12 @@
 package com.blockTeam4Boys.mockUniversity.controller;
 
-import com.blockTeam4Boys.mockUniversity.dto.DiplomaRequest;
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.validation.Valid;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -13,13 +14,12 @@ import java.io.InputStream;
 public class DiplomaController {
 
     @ResponseBody
-    @GetMapping(value = "/diploma", produces = MediaType.APPLICATION_JSON_VALUE)
-    public byte[] analyze(@RequestBody @Valid DiplomaRequest request) throws IOException {
-        if (request.getDiplomaNumber().equals("172313794")) {
+    @GetMapping(value = "/diploma/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public byte[] analyze(@PathVariable String number) throws IOException {
+        if (number.equals("172313794")) {
             InputStream in = getClass().getResourceAsStream("/diploma.json");
             return IOUtils.toByteArray(in);
-        } else {
-            return null;
         }
+        return null;
     }
 }
