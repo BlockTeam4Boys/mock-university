@@ -1,3 +1,23 @@
+GET http://localhost:8888/diploma/172313794
+Host: localhost:8888
+Cache-Control: no-cache
+
+<> 2020-06-02T063857.200.json
+
+###
+
+GET http://localhost:8888/diploma
+Host: localhost:8888
+Content-Type: application/json
+
+{
+  "diplomaNumber" : "172313794"
+}
+
+<> 2020-06-02T063703.404.json
+
+###
+
 GET http://localhost:8888/diploma
 Host: localhost:8888
 Content-Type: application/json

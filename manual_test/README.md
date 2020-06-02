@@ -1,0 +1,1 @@
+Run **diploma_call.http** to see how work this API
