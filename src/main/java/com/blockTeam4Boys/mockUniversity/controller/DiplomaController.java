@@ -2,10 +2,7 @@ package com.blockTeam4Boys.mockUniversity.controller;
 
 import org.apache.commons.io.IOUtils;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -14,12 +11,19 @@ import java.io.InputStream;
 public class DiplomaController {
 
     @ResponseBody
-    @GetMapping(value = "/diploma/{number}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public byte[] analyze(@PathVariable String number) throws IOException {
-        if (number.equals("172313794")) {
-            InputStream in = getClass().getResourceAsStream("/diploma.json");
-            return IOUtils.toByteArray(in);
+    @PostMapping(value = "/diploma", produces = MediaType.APPLICATION_JSON_VALUE)
+    public byte[] analyze(@RequestBody DiplomaRequest request) throws IOException {
+        if (request.getNumber().equals("1222")
+                || (request.getFirstName() + " " + request.getSecondName()).equals("Евгений Ермаков")
+                || request.getYear().equals("2020")
+                || request.getSpec().equals("Программная инженерия")) {
+            return getDiploma();
         }
         return null;
+    }
+
+    private byte[] getDiploma() throws IOException {
+        InputStream in = getClass().getResourceAsStream("/diploma.json");
+        return IOUtils.toByteArray(in);
     }
 }
