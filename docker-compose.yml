@@ -1,7 +1,25 @@
 version: '3'
 services:
-  mockuniver:
+  tusur:
     build: ./
     image: mockuniver
+    environment:
+      diploma.source: tusur
     ports:
-      - 8888:8888
+      - 8888:8080
+
+  tsu:
+    build: ./
+    image: mockuniver
+    environment:
+      diploma.source: tsu
+    ports:
+      - 8887:8080
+
+  tpu:
+    build: ./
+    image: mockuniver
+    environment:
+      diploma.source: tpu
+    ports:
+      - 8886:8080
